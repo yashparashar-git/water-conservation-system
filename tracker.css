@@ -1,0 +1,153 @@
+/* --- Tracker Section --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fcff;
+    color: #003366;
+}
+
+.tracker-container {
+    text-align: center;
+}
+
+.tracker-form {
+    margin-bottom: 30px;
+}
+
+.tracker-form input,
+.tracker-form select,
+.tracker-form button {
+    padding: 10px 15px;
+    margin: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.tracker-form button {
+    background: linear-gradient(45deg, #00bfff, #0077cc);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tracker-form button:hover {
+    background: linear-gradient(45deg, #0077cc, #004080);
+}
+
+/* Water Tank Progress */
+.water-tank {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border: 4px solid #0077cc;
+    border-radius: 20px;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #e6f7ff;
+    display: flex;
+    align-items: flex-end;
+}
+
+.water-fill {
+    position: relative;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, #00bfff, #66ccff);
+    transition: height 0.8s ease-out;
+    overflow: hidden;
+}
+
+/* Wave animation */
+.water-fill::before,
+.water-fill::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: -10%; /* Adjust to position wave correctly relative to water surface */
+    left: -50%; /* Start off-screen */
+    background-color: rgba(255, 255, 255, 0.3); /* Lighter water color for wave */
+    border-radius: 45%; /* Creates the wave curve */
+    animation: wave-motion 5s linear infinite;
+    transform-origin: bottom center;
+    z-index: 1;
+}
+
+.water-fill::after {
+    top: -15%; /* Slightly different position for second wave */
+    left: -55%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: wave-motion 7s linear infinite reverse; /* Different speed/direction */
+}
+
+@keyframes wave-motion {
+    0% {
+        transform: translateX(0) rotateZ(0deg);
+    }
+    50% {
+        transform: translateX(-25%) rotateZ(2deg);
+    }
+    100% {
+        transform: translateX(0) rotateZ(0deg);
+    }
+}
+
+.tank-label {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Styles for new tracker features */
+.tracker-summary {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.summary-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+
+.summary-card h4 {
+    font-size: 1.5rem;
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003366;
+}
+
+.summary-card.goal p {
+    color: #28a745;
+    /* Green for goal */
+}
+
+.summary-card.remaining p {
+    color: #dc3545;
+    /* Red for remaining */
+}
+
+.chart-container {
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaSave - Water Conservation Initiative</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for beautiful typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header and Navigation -->
+    <header class="navbar fixed top-0 left-0 right-0 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo and Site Name -->
+            <a href="index.html" class="text-2xl font-bold text-white flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-droplet">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path>
+                </svg>
+                <span>AquaSave</span>
+            </a>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-7">
+                <a href="index.html"
+                    class="text-white font-semibold hover:text-blue-200 transition duration-300">Home</a>
+                <a href="aboutreal.html"
+                    class="text-white font-semibold hover:text-blue-200 transition duration-300">About</a>
+                <a href="tips.html"
+                    class="text-white font-semibold hover:text-blue-200 transition duration-300">Tips</a>
+                <a href="tracker.html"
+                    class="text-white font-semibold hover:text-blue-200 transition duration-300">Tracker</a>
+                <a href="gallary.html"
+                    class="text-white font-semibold hover:text-blue-200 transition duration-300">Gallery</a>
+                <a href="contact.html"
+                    class="text-white font-semibold hover:text-blue-200 transition duration-300">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white" id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <!-- Animated Waves -->
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 bg-blue-800 bg-opacity-95 z-40 hidden flex-col items-center justify-center space-y-8 text-xl">
+        <a href="index.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Home</a>
+        <a href="aboutreal.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">About</a>
+        <a href="tips.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tips</a>
+        <a href="tracker.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tracker</a>
+        <a href="gallary.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Gallery</a>
+        <a href="contact.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Contact</a>
+        <button class="absolute top-6 right-6 text-white text-3xl" id="close-mobile-menu">
+            &times;
+        </button>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section pt-40 pb-24 text-center relative overflow-hidden">
+            <video autoplay muted loop playsinline>
+                <source src="img/water_bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container mx-auto px-4 relative z-10">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4" data-aos="fade-down">Every Drop is Precious</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-blue-100" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Water is the essence of life. Let's unite to conserve it for a sustainable future.
+                </p>
+                <a href="tips.html"
+                    class="cta-button bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-blue-100"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    Discover How to Help
+                </a>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800" data-aos="fade-up">Understanding the Water Crisis</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Our planet's
+                        most vital resource is under threat. Learn about the two primary challenges we face.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Card 1: Water Scarcity -->
+                    <div class="glass-card p-8 md:p-10" data-aos="fade-right">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path>
+                                <path d="M12 12l-2.83 2.83M12 12l2.83 2.83M12 12V6"></path>
+                            </svg>
+                            <h3 class="text-2xl font-bold ml-3">Water Scarcity</h3>
+                        </div>
+                        <p class="mb-4">The lack of sufficient available water resources to meet the demands of a
+                            region.</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li><strong>Physical Scarcity:</strong> Not enough water in nature to meet demand, common in
+                                arid regions.</li>
+                            <li><strong>Economic Scarcity:</strong> Water is available, but infrastructure (pipes,
+                                wells) is lacking to deliver it.</li>
+                        </ul>
+                    </div>
+                    <!-- Card 2: Water Pollution -->
+                    <div class="glass-card p-8 md:p-10" data-aos="fade-left" data-aos-delay="200">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                            </svg>
+                            <h3 class="text-2xl font-bold ml-3">Water Pollution</h3>
+                        </div>
+                        <p class="mb-4">The contamination of water bodies, making it unsafe for human use and disrupting
+                            ecosystems.</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li><strong>Point Source:</strong> Pollution from a single, identifiable source like a
+                                factory drainpipe.</li>
+                            <li><strong>Non-point Source:</strong> Widespread pollution from diffuse sources, like
+                                agricultural runoff.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section class="py-20 bg-blue-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8" data-aos="fade-up">Our Mission: A Sustainable Water
+                    Future</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+                    At AquaSave, we believe in a world where clean, accessible water is a reality for everyone. Our
+                    mission is to:
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-4xl text-blue-600 mb-4">💡</div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Educate & Inspire</h3>
+                        <p class="text-gray-600">Raise awareness about water scarcity and pollution, inspiring action at
+                            all levels.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-4xl text-green-600 mb-4">🌱</div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Promote Conservation</h3>
+                        <p class="text-gray-600">Provide practical tips and tools for individuals, communities, and
+                            industries to save water.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-4xl text-purple-600 mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Faster Collaboration</h3>
+                        <p class="text-gray-600">Connect people and organizations to work together for sustainable water
+                            management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-20 bg-blue-600 text-white text-center">
+            <div class="container mx-auto px-4">
+                <h3 class="text-4xl font-bold mb-4" data-aos="fade-up">Take Action. Make a Difference.</h3>
+                <p class="mb-8 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Small changes in our daily lives can have a huge impact. Join the movement to protect our water.
+                </p>
+                <a href="tips.html"
+                    class="cta-button bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-blue-100"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    Explore Water-Saving Tips
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <div class="container  px-4">
+            <div class="contact_dev">
+                <div class="contact">
+                    <h1 class="contact_tital">Contact:</h1>
+                    <br>
+                    <a href="mailto:vishalsinghhp35@gmail.com" target="_blank" id="gm">
+                        <h3 class="contact_had" style="color:#9ca3af;">Gmail :</h3>
+                        <h3 class="inner">yashparashar7728@gmail.com</h3>
+                    </a>
+                    <a href="mailto:vishalsinghhp35@gmail.com" target="_blank" id="gm">
+                        <h3 class="contact_had" style="color:#9ca3af;">Instagram :</h3>
+                        <h3 class="inner">yash___parashar09</h3>
+                    </a>
+                    <a href="mailto:vishalsinghhp35@gmail.com" target="_blank" id="gm">
+                        <h3 class="contact_had" style="color:#9ca3af;">Linkedin :</h3>
+                        <h3 class="inner">yashparashar7728@gmail.com</h3>
+                    </a>
+                    <a href="mailto:vishalsinghhp35@gmail.com" target="_blank" id="gm">
+                        <h3 class="contact_had" style="color:#9ca3af;">Twitter :</h3>
+                        <h3 class="inner">yashparashar7728@gamil.com</h3>
+                    </a>
+                </div>
+                <div class="develp">
+                    <h1 class="dev_tital">Developed & Designed :</h1>
+                    <br>
+                    <a href="https://www.instagram.com/yash___parashar09/" target="_blank"><h3>Yash Parashar</h3></a>
+                   <a href="https://www.instagram.com/honey_sadnani/" target="_blank"> <h3>Honey Sadnani</h3></a>
+                    <h3>Vijendra Pal Singh Chouhan</h3>
+                </div>
+            </div>
+            <div class="last text-center ">
+                <p>&copy; 2025 AquaSave Initiative | Designed by BCA Second Year</p>
+                <p class="text-sm mt-2">Let's protect our planet, one drop at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation duration
+            once: true, // whether animation should happen only once
+        });
+    </script>
+
+</body>
+
+</html>

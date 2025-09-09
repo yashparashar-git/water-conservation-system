@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips - AquaSave Water Conservation</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="tips.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar fixed top-0 left-0 right-0 shadow-lg">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+          <a href="index.html" class="text-2xl font-bold text-white flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-droplet"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path></svg>
+              <span>AquaSave</span>
+          </a>
+          <nav class="hidden md:flex space-x-8">
+              <a href="index.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Home</a>
+              <a href="aboutreal.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">About</a>
+              <a href="tips.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tips</a>
+              <a href="tracker.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tracker</a>
+              <a href="gallary.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Gallery</a>
+              <a href="contact.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Contact</a>
+          </nav>
+          <button class="md:hidden text-white" id="mobile-menu-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+      </div>
+      <div class="wave wave-1"></div>
+      <div class="wave wave-2"></div>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-blue-800 bg-opacity-95 z-40 hidden flex-col items-center justify-center space-y-8 text-xl">
+      <a href="index.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Home</a>
+      <a href="aboutreal.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">About</a>
+      <a href="tips.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tips</a>
+      <a href="tracker.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tracker</a>
+      <a href="gallary.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Gallery</a>
+      <a href="contact.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Contact</a>
+      <button class="absolute top-6 right-6 text-white text-3xl" id="close-mobile-menu">
+          &times;
+      </button>
+  </div>
+
+  <section class="section pt-32" id="tips"> <h2 style="font-size: 40px;">💡 Ways to Save Water</h2>
+    <br>
+    <div class="tips-container">
+      <div class="tip-card">
+        <div class="tip-icon">🏠</div>
+        <h3>Household</h3>
+        <ul>
+          <li>Fix leaking taps & pipes</li>
+          <li>Take bucket baths instead of showers</li>
+          <li>Turn off tap while brushing</li>
+          <li>Reuse RO water for plants</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌱</div>
+        <h3>Agriculture</h3>
+        <ul>
+          <li>Adopt drip irrigation</li>
+          <li>Practice rainwater harvesting</li>
+          <li>Grow drought-resistant crops</li>
+          <li>Use mulching to retain soil moisture</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🏭</div>
+        <h3>Industry</h3>
+        <ul>
+          <li>Recycle wastewater</li>
+          <li>Install efficient cooling systems</li>
+          <li>Minimize chemical water usage</li>
+          <li>Regular monitoring for leakages</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="font-size: 40px;">🌿 Water-Wise Gardening</h2>
+    <BR>
+    <div class="tips-container">
+        <div class="tip-card">
+            <div class="tip-icon">💧</div>
+            <h3>Smart Watering</h3>
+            <ul>
+                <li>Water early in the morning or late at night to reduce evaporation.</li>
+                <li>Use a watering can instead of a hose to target plant roots directly.</li>
+                <li>Install a soil moisture sensor to avoid overwatering.</li>
+                <li>Group plants with similar water needs together.</li>
+            </ul>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">🌵</div>
+            <h3>Choose Native Plants</h3>
+            <ul>
+                <li>Select plants that are native to your region.</li>
+                <li>Native plants are better adapted to the local climate.</li>
+                <li>They require less water and are more resistant to pests.</li>
+                <li>Support local biodiversity by choosing native species.</li>
+            </ul>
+        </div>
+        <div class="tip-card">
+            <div class="tip-icon">🍂</div>
+            <h3>Use Mulch</h3>
+            <ul>
+                <li>Apply a layer of mulch around your plants.</li>
+                <li>Mulch helps soil retain moisture by slowing evaporation.</li>
+                <li>It also suppresses weeds that compete for water.</li>
+                <li>Use organic mulch like wood chips or straw.</li>
+            </ul>
+        </div>
+    </div>
+  </section>
+
+  <section class="section facts-section">
+      <h2 style="font-size: 40px;">🤔 Did You Know?</h2>
+    <br>
+      <div class="facts-container">
+          <div class="fact-item">
+              <p>A single dripping tap can waste over <strong>15,000 liters</strong> of water per year.</p>
+          </div>
+          <div class="fact-item">
+              <p>Less than <strong>1%</strong> of the Earth's water is fresh and accessible for human use.</p>
+          </div>
+          <div class="fact-item">
+              <p>On average, a 10-minute shower can use up to <strong>100 liters</strong> of water.</p>
+          </div>
+      </div>
+  </section>
+
+  <section class="section">
+    <h2 style="font-size: 40px;">🤝 Community Initiatives</h2>
+    <br>
+    <div class="initiative-card">
+      <h3>Get Involved and Make a Difference</h3>
+      <p>Water conservation is a collective effort. Here’s how you can contribute to community initiatives:</p>
+      <ul>
+        <li>Organize or join local clean-up drives for rivers, lakes, and ponds.</li>
+        <li>Participate in awareness campaigns to educate neighbors about water scarcity.</li>
+        <li>Advocate for rainwater harvesting systems in your community buildings and parks.</li>
+        <li>Report public water leaks to local authorities promptly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-20 bg-blue-600 text-white text-center">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Start Your Water-Saving Journey!</h3>
+      <p class="mb-8 text-lg" data-aos="fade-up" data-aos-delay="200">
+          Track your progress and see the impact of your efforts.
+      </p>
+      <a href="tracker.html" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition" data-aos="zoom-in" data-aos-delay="400">
+          Track Your Water Usage
+      </a>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+      <p>&copy; 2025 AquaSave Initiative | Designed by BCA Second Year</p>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

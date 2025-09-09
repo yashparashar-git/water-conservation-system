@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fcff;
+    color: #003366;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 20px;
+    color: #005b96;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tip-card {
+    flex: 1 1 300px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color:#005b96;
+    color: white;
+}
+
+.tip-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #00bfff;
+}
+
+.tip-card h3 {
+    margin-bottom: 10px;
+    color: #0077cc;
+}
+
+.tip-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Aligns list items to the left for better readability */
+}
+
+.tip-card ul li {
+    margin: 8px 0; /* Increased margin for better spacing */
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Add a checkmark or bullet before each list item */
+.tip-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00bfff;
+    font-weight: bold;
+}
+
+/* --- NEW STYLES for Facts Section --- */
+.facts-section {
+    background-color: #eaf6ff;
+    border-radius: 20px;
+}
+
+.facts-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fact-item {
+    background: #0077be;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+}
+
+.fact-item strong {
+    font-size: 1.3rem;
+    color: #cceeff;
+}
+
+/* --- NEW STYLES for Community Initiatives Section --- */
+.initiative-card {
+    background: linear-gradient(45deg, #005f99, #0077be);
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.initiative-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.initiative-card p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.initiative-card ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.initiative-card ul li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.initiative-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #cceeff;
+}
+
+.tip-card:hover h3{
+    color: #00bfff;
+    font-size: medium;
+}

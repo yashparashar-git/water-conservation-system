@@ -1,0 +1,272 @@
+/* Basic page styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Using Inter from Google Fonts */
+    background-color: #f0f4f8; /* Light blue-gray background */
+    color: #333; /* Default text color */
+}
+
+/* --- Header and Navigation --- */
+.navbar {
+    background-color: #0077be; /* Deep, trustworthy blue */
+    position: fixed; /* Changed from relative to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding: 1rem 0;
+    z-index: 50; /* High z-index to be on top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Horizontal padding */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #cceeff;
+}
+
+/* --- Animated Wave --- */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 65 C 250 125 250 -25 500 65 C 750 125 750 -25 1000 65 L 1000 100 L 0 100 Z" fill="%233498db"></path></svg>');
+    background-size: 1000px 100px;
+}
+
+.wave-1 {
+    animation: wave-flow 12s linear infinite;
+    opacity: 0.7;
+    bottom: -5px;
+    z-index: -2;
+}
+
+.wave-2 {
+    animation: wave-flow 18s linear infinite reverse;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+@keyframes wave-flow {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(45deg, #005f99 0%, #0077be 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px; /* Adjust for fixed navbar */
+    padding-bottom: 80px;
+}
+
+.hero-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    filter: brightness(0.6); /* Darken video for text readability */
+    object-fit: cover;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Glassmorphism Card Effect --- */
+.glass-card {
+    background-color:#0790df;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for text */
+    border-radius: 1.5rem;
+    z-index: -1; /* Behind content */
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure text color is white or light for readability within glass cards */
+.glass-card h3,
+.glass-card p,
+.glass-card ul li {
+    color: white;
+}
+
+/* --- Call to Action Button --- */
+.cta-button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Menu Overlay */
+#mobile-menu-overlay {
+    transition: all 0.3s ease-in-out;
+}
+
+/* General Section Padding */
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #1a202c; /* Dark gray */
+    color: #a0aec0; /* Light gray text */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+.contact_dev{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_tital{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f0f4f8;
+    padding-left: 70px;
+}
+#gm{
+    display: flex;
+    align-items: center;
+}
+.contact_tital, #gm h3{
+    color: #f0f4f8;
+}
+
+.last{
+    margin-top: 80px
+}
+/* .develp{
+    margin-right: 150px;
+} */
+.dev_tital{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #f0f4f8;
+}
+.develp h3{
+    /* padding-left: 40px; */
+    /* margin-top: 4px; */
+    color: #f0f4f8;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contact_dev {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* allow wrapping */
+    gap: 2rem; /* spacing between sections */
+}
+/* .inner{
+    padding-left: 10px;
+} */
+
+/* Make footer stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .contact_dev {
+        flex-direction: column;
+        align-items: flex-start; /* or center if you want */
+        text-align: center; /* keep alignment */
+    }
+
+    .contact {
+        margin: auto;
+        margin-bottom: 2rem; /* space under contact block */
+        text-align: center;
+        padding: 0;
+    }
+    .dev_tital{
+        padding-left: 50px;
+    }
+
+    .develp {
+        margin-right: 0; /* reset the big right margin */
+        padding-left: 20px; /* add some spacing */
+    }
+}
+
+@media (max-width: 432px)
+{
+    .contact_tital, .dev_tital{
+        font-size: 1.6rem;
+    }
+    .contact_had .inner{
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+}
+.contact_had{
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-left: 79px;
+}
+
+.contact:hover h3{
+    color: #0790df;
+}

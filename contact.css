@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fcff;
+    color: #003366;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 10px;
+    color: #005b96;
+}
+
+p.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* --- Contact --- */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    flex: 1 1 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: linear-gradient(45deg, #00bfff, #0077cc);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(45deg, #0077cc, #004080);
+}
+
+.contact-illustration {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.contact-illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #005b96;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00bfff;
+}

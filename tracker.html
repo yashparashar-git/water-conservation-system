@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracker - AquaSave Water Conservation</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="tracker.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header class="navbar fixed top-0 left-0 right-0 shadow-lg">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+          <!-- Logo and Site Name -->
+          <a href="index.html" class="text-2xl font-bold text-white flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-droplet"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path></svg>
+              <span>AquaSave</span>
+          </a>
+          <!-- Navigation Links -->
+          <nav class="hidden md:flex space-x-8">
+              <a href="index.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Home</a>
+              <a href="aboutreal.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">About</a>
+              <a href="tips.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tips</a>
+              <a href="tracker.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tracker</a>
+              <a href="gallary.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Gallery</a>
+              <a href="contact.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Contact</a>
+          </nav>
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-white" id="mobile-menu-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+      </div>
+      <!-- Animated Waves -->
+      <div class="wave wave-1"></div>
+      <div class="wave wave-2"></div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-blue-800 bg-opacity-95 z-40 hidden flex-col items-center justify-center space-y-8 text-xl">
+      <a href="index.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Home</a>
+      <a href="aboutreal.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">About</a>
+      <a href="tips.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tips</a>
+      <a href="tracker.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Tracker</a>
+      <a href="gallary.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Gallery</a>
+      <a href="contact.html" class="text-white font-semibold hover:text-blue-200 transition duration-300">Contact</a>
+      <button class="absolute top-6 right-6 text-white text-3xl" id="close-mobile-menu">
+          &times;
+      </button>
+  </div>
+
+  <!-- Tracker Section -->
+  <section class="section pt-32" id="tracker"> <!-- Added padding-top for fixed navbar -->
+    <h2 style="text-align: center; font-size: 40px;">📊 Track Your Daily Usage</h2>
+    <div class="tracker-container">
+      <!-- Form -->
+      <form class="tracker-form">
+        <input type="number" id="liters" placeholder="Liters used" required min="1">
+        <select id="category" required>
+          <option value="">Select Category</option>
+          <option value="Home">Home</option>
+          <option value="School">School</option>
+          <option value="Industry">Industry</option>
+        </select>
+        <button type="submit">Log Usage</button>
+      </form>
+      
+      <!-- Water Tank -->
+      <div class="water-tank">
+        <div class="water-fill" id="waterFill"></div>
+      </div>
+      <div class="tank-label" id="tankLabel">0 Liters Logged (Average Usage: 100L)</div>
+
+      <!-- Tracker Summary -->
+      <div class="tracker-summary">
+        <div class="summary-card">
+            <h4>Today's Usage</h4>
+            <p id="todayUsage">0 L</p>
+        </div>
+        <div class="summary-card goal">
+            <h4>Average Usage</h4>
+            <p id="dailyGoal">150 L</p>
+        </div>
+        <div class="summary-card remaining">
+            <h4>Remaining</h4>
+            <p id="remainingGoal">150 L</p>
+        </div>
+      </div>
+
+      <!-- Usage Breakdown Chart -->
+      <div class="chart-container">
+        <h4 class="text-xl font-semibold text-blue-700 mb-4">Usage Breakdown by Category</h4>
+        <canvas id="usageChart"></canvas>
+      </div>
+    </div>
+  </section>
+  <!-- Call to Action -->
+  <section class="py-20 bg-blue-600 text-white text-center">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Want More Water-Saving Ideas?</h3>
+      <p class="mb-8 text-lg" data-aos="fade-up" data-aos-delay="200">
+          Discover a comprehensive list of tips for every aspect of your life.
+      </p>
+      <a href="tips.html" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition" data-aos="zoom-in" data-aos-delay="400">
+          Explore All Tips
+      </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+      <p>&copy; 2025 AquaSave Initiative | Designed by BCA Second Year</p>
+  </footer>
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
